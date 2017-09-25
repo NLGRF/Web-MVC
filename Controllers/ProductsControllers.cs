@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MVC.Models;
 
 namespace MVC.Controllers
 {
@@ -17,8 +18,17 @@ namespace MVC.Controllers
 
     public IActionResult Index()
     {
-      
+
+
       return View();
+    }
+
+    public IActionResult ViewProducts(){
+      Products _data = new Products();
+      _data.Name = "Book";
+      _data.Detail = "ASP.NET Core MVC";
+      _data.Price = 150.25M;
+      return View(_data);
     }
   }
 }

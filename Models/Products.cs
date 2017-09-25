@@ -5,5 +5,9 @@ namespace MVC.Models
         public int ID { get; set; }
 
         public string Name { get; set; }
+
+        public string Detail { get; set; }
+
+        public decimal Price { get; set; }
     }
 }
